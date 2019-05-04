@@ -3,9 +3,11 @@
 
     <item
         android:id="@+id/trending"
-        android:title="Trending" />
+        android:icon="@drawable/ic_trended"
+        android:title="@string/trending" />
 
     <item
         android:id="@+id/settings"
-        android:title="Settings" />
+        android:icon="@drawable/ic_settings"
+        android:title="@string/settings" />
 </menu>
