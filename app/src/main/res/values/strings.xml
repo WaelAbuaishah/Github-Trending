@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Trending Repos</string>
+    <string name="content_description_trending_repository">Trending Repos</string>
+    <string name="title_trending_repository">Trending Repos</string>
+    <string name="content_description_about_us">About us</string>
+    <string name="title_about_us">About us</string>
+    <string name="settings">Settings</string>
+</resources>
