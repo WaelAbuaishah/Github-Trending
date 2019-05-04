@@ -1,8 +1,8 @@
 # Mobile Coding Challenge
 
 ## Idea of the App 
-The task is to implement a small app that will list the most starred Github repos that were created in the last 30 days. 
-You'll be fetching the sorted JSON data directly from the Github API (Github API explained down below). 
+A small app that will list the most starred Github repos that were created in the last 30 days. 
+App is getting sorted data directly from the Github API 
 
 ## Features
 * As a User I should be able to list the most starred Github repos that were created in the last 30 days. 
@@ -12,13 +12,7 @@ You'll be fetching the sorted JSON data directly from the Github API (Github API
   * Repository description 
   * Numbers of stars for the repo. 
   * Username and avatar of the owner. 
-* [BONUS] As a User I should be able to keep scrolling and new results should appear (pagination).
-
-## Things to keep in mind 🚨
-* Features are less important than code quality. Put more focus on code quality and less on speed and number of features implemented. 
-* Your code will be evaluated based on: code structure, programming best practices, legibility (and not number of features implemented or speed). 
-* The git commit history (and git commit messages) will be also evaluated.
-* Do not forget to include few details about the project in the README (e.g explain choice of libraries, how to run it ...) 
+* As a User I should be able to keep scrolling and new results should appear (pagination).
 
 ## How to get the data from Github 
 To get the most starred Github repos created in the last 30 days (relative to 2017-11-22), you'll need to call the following endpoint : 
@@ -44,10 +38,17 @@ Here's what each element represents :
 ![alt text](https://raw.githubusercontent.com/hiddenfounders/mobile-coding-challenge/master/row-explained.png)
 
 
-## Technologies to use 
-Choose whatever mobile platform you're most familiar with. 
+ ## Installation
+Clone this repository and import into **Android Studio**
+```bash
+git clone https://github.com/hiddenfounders/mobile-coding-challenge.git
+```
 
-* For iOS, feel free to use Swift or Objective-C. 
-* For Android, feel free to use Kotlin or Java. 
+ ## Built With
+* Android Studio: 3.3
+* Gradle: 2.33
+* Kotlin: 1.3.21
+* Androidx
+* Glide
 
 
