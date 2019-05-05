@@ -45,6 +45,9 @@ dependencies {
     implementation deps.retrofit.runtime
     implementation deps.retrofit.gson
 
+    implementation 'com.github.castorflex.smoothprogressbar:library:1.1.0'
+
+
     // http logging interceptor and OKHTTP and urlConnection (need for retrofit)
     implementation deps.okhttp3.okhttp
     implementation deps.okhttp3.urlconnection

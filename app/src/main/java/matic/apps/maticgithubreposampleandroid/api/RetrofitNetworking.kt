@@ -18,11 +18,12 @@ import retrofit2.Response
                         println("RetrofitNetworking.onResponse Empty Response.")
                         responseInterface?.onSuccess(ApiEmptyResponse())
                     } else {
-                        if (body != null) {
-                            println("RetrofitNetworking.onResponse Empty Response. Body $body")
-                        } else {
+                        if (body != null ) {
                             println("RetrofitNetworking.onResponse Success Response, no body")
+                        } else {
+                            println("RetrofitNetworking.onResponse Empty Response. Body $body")
                         }
+                        // RetrofitNetworking.onResponse Empty Response. Body RepoSearchResponse(total=158, items=[])
                         responseInterface?.onSuccess(
                             ApiSuccessResponse(
                                 body = body,

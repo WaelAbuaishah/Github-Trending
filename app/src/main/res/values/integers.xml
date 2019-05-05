@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array
+            name="indicator_colors">
+        <item>@color/colorPrimaryDark</item>
+        <item>@color/colorAccent</item>
+        <item>@color/design_default_color_primary</item>
+        <item>@color/spb_default_color</item>
+    </integer-array>
+
+</resources>

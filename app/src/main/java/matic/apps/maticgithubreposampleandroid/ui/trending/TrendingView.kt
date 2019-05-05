@@ -26,8 +26,8 @@ import com.google.android.material.snackbar.Snackbar
  */
 class TrendingView : BaseView() {
 
-    lateinit var trendingViewModel: TrendingViewModel
-    var reposAdapter: RepositoriesAdapter? = null
+    private lateinit var trendingViewModel: TrendingViewModel
+    private var reposAdapter: RepositoriesAdapter? = null
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.view_trending_layout, container, false)
@@ -81,9 +81,9 @@ class TrendingView : BaseView() {
 
         if (isClear) {
             // clear the old data
-            reposAdapter!!.items = (newList!!.result as ArrayList<Repo>?)!!
+            reposAdapter!!.items = (newList.result as ArrayList<Repo>?)!!
         } else {
-            reposAdapter!!.addItems (newList!!.result!!)
+            reposAdapter!!.addItems (newList.result!!)
         }
 
         if (trending_recycler_view.adapter == null) {
