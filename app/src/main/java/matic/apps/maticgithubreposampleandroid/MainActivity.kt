@@ -6,9 +6,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
 import androidx.navigation.NavController
 import androidx.navigation.ui.setupActionBarWithNavController
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main.*
-import matic.apps.maticgithubreposampleandroid.utils.uiUtils.setupWithNavController
+import matic.apps.maticgithubreposampleandroid.utils.navigationUtils.setupWithNavController
 
 
 class MainActivity : AppCompatActivity() {

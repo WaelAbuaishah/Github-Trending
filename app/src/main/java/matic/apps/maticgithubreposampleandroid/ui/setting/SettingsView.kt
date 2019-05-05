@@ -4,14 +4,14 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import matic.apps.maticgithubreposampleandroid.R
+import matic.apps.maticgithubreposampleandroid.ui.common.base.BaseView
 
 
 /**
  * Shows a setting screen
  */
-class SettingsView : Fragment() {
+class SettingsView : BaseView() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

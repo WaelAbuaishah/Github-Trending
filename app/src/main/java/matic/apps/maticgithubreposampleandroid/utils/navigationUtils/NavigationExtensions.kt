@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package matic.apps.maticgithubreposampleandroid.utils.uiUtils
+package matic.apps.maticgithubreposampleandroid.utils.navigationUtils
 
 import android.content.Intent
 import android.util.SparseArray

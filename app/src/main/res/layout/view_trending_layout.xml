@@ -9,22 +9,15 @@
         android:background="@android:color/background_light"
         tools:context="matic.apps.maticgithubreposampleandroid.ui.trending.TrendingView">
 
-    <TextView
+    <com.aspsine.irecyclerview.IRecyclerView
+            android:id="@+id/trending_recycler_view"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="34dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="34dp"
-            android:layout_marginBottom="16dp"
-            android:text="Trending View"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textSize="18sp"
-            android:gravity="center"
-            android:textStyle="bold"
+            app:loadMoreEnabled="true"
+            android:layout_height="0dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_chainStyle="packed"/>
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
