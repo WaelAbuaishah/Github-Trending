@@ -54,6 +54,12 @@ dependencies {
     implementation deps.okhttp_logging_interceptor
     implementation deps.okhttp3.interceptor
 
+    // Glide library for loading images
+    implementation deps.glide.compiler
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
+    implementation deps.glide.runtime
+
+
     // Timber, A logger with a small, extensible API which provides utility on top of Android's normal Log class.
     implementation deps.timber
 
