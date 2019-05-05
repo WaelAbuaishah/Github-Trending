@@ -26,7 +26,7 @@ class RepositoriesAdapter : RecyclerView.Adapter<RepositoryHolder>() {
 
     fun addItems(result: List<Repo>) {
         items.addAll(result)
-        notifyItemRangeInserted((items.size - result.size)-1, result.size - 1)
+        notifyItemRangeInserted((items.size - result.size), result.size - 1)
     }
 
 }

@@ -19,14 +19,18 @@ sealed class ApiResponse<T> {
             return if (response.isSuccessful) {
                 val body = response.body()
                 if (body == null || response.code() == 204) {
+                    println("ApiResponse.create : 204 || null")
                     ApiEmptyResponse()
                 } else {
+                    println("ApiResponse.create : success")
                     ApiSuccessResponse(
                         body = body,
                         linkHeader = response.headers()?.get("link")
                     )
                 }
             } else {
+                println("ApiResponse.create : failure")
+
                 val msg = response.errorBody()?.string()
                 val errorMsg = if (msg.isNullOrEmpty()) {
                     response.message()

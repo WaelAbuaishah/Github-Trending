@@ -29,8 +29,8 @@ class TrendingViewModel : BaseViewModel<List<Repo>>() {
             requiredPage = pageNumber
         }
 
-        var apiService = InitApi.getRetrofitInstance().create(GithubService::class.java)
-        var call = apiService.searchRepos(
+        val apiService = InitApi.getRetrofitInstance().create(GithubService::class.java)
+        val call = apiService.searchRepos(
             query = getSearchQuery(),
             page = requiredPage.toString()
         )
@@ -75,12 +75,16 @@ class TrendingViewModel : BaseViewModel<List<Repo>>() {
             }
 
             override fun onGeneralError(error: Throwable) {
+                println("TrendingViewModel.onGeneralError")
+
                 // customize error message and show it to the user
                 isLoading = false
                 apiResult.value = ApiResult(result = null, error = "onGeneralError")
             }
 
             override fun onOtherError(error: Throwable) {
+                println("TrendingViewModel.onOtherError")
+
                 // this call back created to take an action like, force logout user if session expired
                 isLoading = false
                 apiResult.value = ApiResult(result = null, error = "Something wrong happened!")

@@ -62,7 +62,6 @@ class TrendingView : BaseView() {
 
     private fun onListUpdated(newList: ApiResult<List<Repo>>?) {
         println("TrendingView.onListUpdated")
-
         onRecyclerViewData(newList)
     }
 
@@ -86,6 +85,15 @@ class TrendingView : BaseView() {
             reposAdapter!!.addItems (newList.result!!)
         }
 
+        if (newList.result != null && newList.result != null && newList.result!!.isEmpty()) {
+            // the end of the list
+            println("TrendingView.onRecyclerViewData TrendingViewModel the list is empty now")
+            activity!!.runOnUiThread {
+                trending_recycler_view.loadMoreFooterView.visibility = View.GONE
+                trending_recycler_view.setLoadMoreEnabled(false)
+            }
+        }
+
         if (trending_recycler_view.adapter == null) {
             trending_recycler_view.iAdapter = reposAdapter
         }
@@ -93,8 +101,10 @@ class TrendingView : BaseView() {
     }
 
     private fun initRecyclerViewListeners() {
+
         trending_recycler_view!!.layoutManager = LinearLayoutManager(this@TrendingView.context , RecyclerView.VERTICAL , false)
         (trending_recycler_view!!.itemAnimator as SimpleItemAnimator).supportsChangeAnimations = false
+        trending_recycler_view.setLoadMoreEnabled(true)
 
         trending_recycler_view.setOnLoadMoreListener {
             println("TrendingView.initRecyclerViewListeners")
