@@ -95,7 +95,7 @@ class TrendingViewModel : BaseViewModel<List<Repo>>() {
     private fun getSearchQuery(): String {
         // here we need to get format
         val currentDate = Calendar.getInstance()
-        val queryRequiredDateFormat = SimpleDateFormat("yyyy-mm-dd", Locale.ENGLISH)
+        val queryRequiredDateFormat = SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH)
         return queryRequiredDateFormat.format(currentDate.time)
     }
 }
