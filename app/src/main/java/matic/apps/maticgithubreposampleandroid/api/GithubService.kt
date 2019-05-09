@@ -1,5 +1,6 @@
 package matic.apps.maticgithubreposampleandroid.api
 
+import androidx.lifecycle.LiveData
 import matic.apps.maticgithubreposampleandroid.models.RepoSearchResponse
 import retrofit2.Call
 import retrofit2.http.GET
@@ -23,4 +24,12 @@ interface GithubService {
         @Query("order") order: String = "desc",
         @Query("page") page: String = "1"
     ): Call<RepoSearchResponse>
+
+    @GET("search/repositories")
+    fun searchRepositories(
+        @Query("q") query: String = "",
+        @Query("sort") sort: String = "stars",
+        @Query("order") order: String = "desc",
+        @Query("page") page: String = "1"
+    ): LiveData<ApiResponse<RepoSearchResponse>>
 }

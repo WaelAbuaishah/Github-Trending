@@ -20,7 +20,7 @@ import retrofit2.Response
                     } else {
                         println("RetrofitNetworking.onResponse Success Response, no body")
                         // RetrofitNetworking.onResponse Empty Response. Body RepoSearchResponse(total=158, items=[])
-                        responseInterface?.onSuccess(
+                        responseInterface.onSuccess(
                             ApiSuccessResponse(
                                 body = body,
                                 linkHeader = response.headers()?.get("link")
