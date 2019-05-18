@@ -1,4 +1,4 @@
-# Mobile Coding Challenge
+# Github-Trending
 
 ## Idea of the App 
 A small app that will list the most starred Github repos that were created in the last 30 days. 
